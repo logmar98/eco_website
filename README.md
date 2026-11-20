@@ -1,6 +1,21 @@
-# Eco Website - ArbibStore
+# Eco Website
 
 A modern e-commerce website built with React, featuring eco-friendly products and multi-language support.
+
+## Branding & Site Configuration
+
+To customize the brand name, browser title, and currency for any store, edit **`src/config/siteConfig.js`** (or set environment variables in `.env`):
+
+```javascript
+export const SITE_CONFIG = {
+  brandName: 'YourBrand',
+  siteTitle: 'YourBrand - Online Store',
+  description: 'Your shop description',
+  logoUrl: '/images/logo.png',
+  currency: 'DH'
+};
+```
+Changing these values updates the Navbar, Footer, Translations, Page Titles, and Meta tags automatically.
 
 ## Features
 

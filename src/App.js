@@ -21,6 +21,7 @@ import Contact from './pages/Contact';
 import AdminContact from './pages/admin/AdminContact';
 import ThankYou from './pages/ThankYou';
 import ReactPixel from 'react-facebook-pixel';
+import { SITE_CONFIG } from './config/siteConfig';
 
 // Initialize Meta Pixel
 const options = {
@@ -146,6 +147,16 @@ const AppRoutes = () => {
 };
 
 function App() {
+  useEffect(() => {
+    if (SITE_CONFIG.siteTitle) {
+      document.title = SITE_CONFIG.siteTitle;
+    }
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription && SITE_CONFIG.description) {
+      metaDescription.setAttribute('content', `${SITE_CONFIG.brandName} - ${SITE_CONFIG.description}`);
+    }
+  }, []);
+
   return (
     <LanguageProvider>
       <CartProvider>

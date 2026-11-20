@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { SITE_CONFIG } from '../config/siteConfig';
 
 // Translation data
 const translations = {
@@ -14,7 +15,7 @@ const translations = {
     selectLanguage: 'Select Language',
     
     // Home page
-    welcome: 'Welcome to ArbibStore',
+    welcome: `Welcome to ${SITE_CONFIG.brandName}`,
     heroSubtitle: 'Fast shipping, great quality, and unbeatable prices on products you love.',
     shopNow: 'Shop Now',
     popularProducts: 'Popular Products',
@@ -120,7 +121,7 @@ const translations = {
     selectLanguage: 'Sélectionner la langue',
     
     // Home page
-    welcome: 'Bienvenue chez ArbibStore',
+    welcome: `Bienvenue chez ${SITE_CONFIG.brandName}`,
     heroSubtitle: 'Expédition rapide, qualité exceptionnelle et prix imbattables sur les produits que vous aimez.',
     shopNow: 'Acheter Maintenant',
     popularProducts: 'Produits Populaires',

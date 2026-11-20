@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useLanguage } from '../context/LanguageContext';
+import { SITE_CONFIG } from '../config/siteConfig';
 import './Navbar.css';
 
 function Navbar() {
@@ -20,8 +21,8 @@ function Navbar() {
     <nav className={`navbar${open ? ' menu-open' : ''}`}>
       <div className="navbar__logo">
         <NavLink to="/" className="navbar__logo-link">
-          <img src="/images/logo.png" alt="ArbibStore Logo" className="navbar__logo-img" />
-          <span>ArbibStore</span>
+          <img src={SITE_CONFIG.logoUrl} alt={`${SITE_CONFIG.brandName} Logo`} className="navbar__logo-img" />
+          <span>{SITE_CONFIG.brandName}</span>
         </NavLink>
       </div>
       <div className="navbar__right-group">
